@@ -1,0 +1,35 @@
+; BIND9 Zone File for lab.local
+; File: /etc/bind/db.lab.local
+; This zone file defines authoritative DNS records for the lab.local domain
+; used in the Capstone Project DNS enumeration task.
+
+$TTL    604800
+@       IN      SOA     ns1.lab.local. admin.lab.local. (
+                     2024081201         ; Serial (YYYYMMDDNN)
+                         604800         ; Refresh (7 days)
+                          86400         ; Retry (1 day)
+                        2419200         ; Expire (28 days)
+                         604800 )       ; Negative Cache TTL (7 days)
+
+; NS Record — nameserver for the zone
+@       IN      NS      ns1.lab.local.
+
+; A Records — map hostnames to IP addresses
+@       IN      A       192.168.56.10
+ns1     IN      A       192.168.56.10
+kali    IN      A       192.168.56.10
+meta    IN      A       192.168.56.20
+webserver IN    A       192.168.56.20
+db      IN      A       192.168.56.30
+
+; MX Record — mail exchange server for the domain
+@       IN      MX  10  mail.lab.local.
+mail    IN      A       192.168.56.10
+
+; TXT Record — SPF and verification records
+@       IN      TXT     "v=spf1 mx a ip4:192.168.56.0/24 -all"
+@       IN      TXT     "Lab domain for Capstone security assessment"
+
+; CNAME Record — alias www to the webserver
+www     IN      CNAME   webserver.lab.local.
+ftp     IN      CNAME   meta.lab.local.

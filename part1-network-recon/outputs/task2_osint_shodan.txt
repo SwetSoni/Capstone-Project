@@ -1,0 +1,27 @@
+=== Shodan OSINT Results (Manual Research) ===
+Query: port:80 product:Apache country:US
+Date: Saturday 15 August 2026 02:02:02 PM IST
+Method: Manual search performed via Shodan web interface.
+Note: Automated API searches are restricted to paid memberships.
+Source: Findings observed and documented from shodan.io
+
+=== Observations ===
+- Multiple Apache web servers identified in the US
+- Port 80 (HTTP) is open on numerous hosts
+- Various Apache versions detected across different organizations
+8.8.8.8
+Hostnames:               workplanapi.sb.one.alliantgroup.com;dns.google
+City:                    Mountain View
+Country:                 United States
+Organization:            Google LLC
+Updated:                 2026-08-15T05:44:00.182417
+Number of open ports:    2
+
+Ports:
+     53/tcp  
+     53/udp  
+    443/tcp  
+	|-- HTTP title: Google Public DNS
+	|-- Cert Issuer: C=US, CN=WR2, O=Google Trust Services
+	|-- Cert Subject: CN=dns.google
+	|-- SSL Versions: -SSLv2, -SSLv3, -TLSv1, -TLSv1.1, TLSv1.2, TLSv1.3

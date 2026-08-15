@@ -1,0 +1,82 @@
+--- DNSenum Subdomain Brute-force ---
+dnsenum VERSION:1.3.1
+[1;34m
+-----   lab.local   -----
+[0m[1;31m
+
+Host's addresses:
+__________________
+
+[0mlab.local.                               604800   IN    A        192.168.56.10
+[1;31m
+
+Name Servers:
+______________
+
+[0mns1.lab.local.                           604800   IN    A        192.168.56.10
+[1;31m
+
+Mail (MX) Servers:
+___________________
+
+[0mmail.lab.local.                          604800   IN    A        192.168.56.10
+[1;31m
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+[0munresolvable name: ns1.lab.local at /usr/bin/dnsenum line 892 thread 1.
+AXFR record query failed: no nameservers
+
+Trying Zone Transfer for lab.local on ns1.lab.local ... 
+  perhaps Google is blocking our queries.
+ Check manually.
+[1;31m
+
+Scraping lab.local subdomains from Google:
+___________________________________________
+
+[0m
+ ----   Google search page: 1   ---- 
+
+[1;31m
+
+Google Results:
+________________
+
+[0m[1;31m
+
+Brute forcing with /usr/share/dnsenum/dns.txt:
+_______________________________________________
+
+[0mmeta.lab.local.                          604800   IN    A        192.168.56.20
+ftp.lab.local.                           604800   IN    CNAME    meta.lab.local.
+meta.lab.local.                          604800   IN    A        192.168.56.20
+webserver.lab.local.                     604800   IN    A        192.168.56.20
+ns1.lab.local.                           604800   IN    A        192.168.56.10
+mail.lab.local.                          604800   IN    A        192.168.56.10
+www.lab.local.                           604800   IN    CNAME    webserver.lab.local.
+webserver.lab.local.                     604800   IN    A        192.168.56.20
+[1;31m
+
+Launching Whois Queries:
+_________________________
+
+[0m[1;31m
+
+lab.local_________
+
+[0m[1;31m
+
+Performing reverse lookup on 0 ip addresses:
+_____________________________________________
+
+[0m
+0 results out of 0 IP addresses.
+[1;31m
+
+lab.local ip blocks:
+_____________________
+
+[0m
+done.

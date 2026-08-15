@@ -1,0 +1,33 @@
+# Environment variables
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Task specification files (not part of submission)
+Task_Part-*
+Guidelines.png
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log

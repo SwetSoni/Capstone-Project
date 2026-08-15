@@ -1,0 +1,5 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:55:07 2026 as: /usr/lib/nmap/nmap -sn -PE -PS22,80,443 -PA80 -oN ./outputs/task3_ping_sweep_20260812_215507.nmap -oG ./outputs/task3_ping_sweep_20260812_215507.gnmap 192.168.56.0/24
+Host: 192.168.56.1 ()	Status: Up
+Host: 192.168.56.20 ()	Status: Up
+Host: 192.168.56.10 ()	Status: Up
+# Nmap done at Wed Aug 12 21:55:10 2026 -- 256 IP addresses (3 hosts up) scanned in 3.03 seconds

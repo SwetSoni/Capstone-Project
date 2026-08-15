@@ -1,0 +1,112 @@
+
+; <<>> DiG 9.20.26-1-Debian <<>> A tesla.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55110
+;; flags: qr rd ra; QUERY: 1, ANSWER: 10, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1280
+;; QUESTION SECTION:
+;tesla.com.			IN	A
+
+;; ANSWER SECTION:
+tesla.com.		5	IN	A	2.18.53.207
+tesla.com.		5	IN	A	2.18.55.207
+tesla.com.		5	IN	A	2.18.52.207
+tesla.com.		5	IN	A	23.7.244.207
+tesla.com.		5	IN	A	2.18.50.207
+tesla.com.		5	IN	A	2.18.49.207
+tesla.com.		5	IN	A	23.40.100.207
+tesla.com.		5	IN	A	2.18.54.207
+tesla.com.		5	IN	A	2.18.48.207
+tesla.com.		5	IN	A	2.18.51.207
+
+;; Query time: 160 msec
+;; SERVER: 192.168.174.2#53(192.168.174.2) (UDP)
+;; WHEN: Sat Aug 15 12:44:10 IST 2026
+;; MSG SIZE  rcvd: 198
+
+
+; <<>> DiG 9.20.26-1-Debian <<>> MX tesla.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46721
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1280
+;; QUESTION SECTION:
+;tesla.com.			IN	MX
+
+;; ANSWER SECTION:
+tesla.com.		5	IN	MX	10 tesla-com.mail.protection.outlook.com.
+
+;; Query time: 48 msec
+;; SERVER: 192.168.174.2#53(192.168.174.2) (UDP)
+;; WHEN: Sat Aug 15 12:44:10 IST 2026
+;; MSG SIZE  rcvd: 88
+
+
+; <<>> DiG 9.20.26-1-Debian <<>> NS tesla.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63637
+;; flags: qr rd ra; QUERY: 1, ANSWER: 7, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1280
+;; QUESTION SECTION:
+;tesla.com.			IN	NS
+
+;; ANSWER SECTION:
+tesla.com.		5	IN	NS	a1-12.akam.net.
+tesla.com.		5	IN	NS	a12-64.akam.net.
+tesla.com.		5	IN	NS	a28-65.akam.net.
+tesla.com.		5	IN	NS	a7-66.akam.net.
+tesla.com.		5	IN	NS	edns69.ultradns.com.
+tesla.com.		5	IN	NS	a10-67.akam.net.
+tesla.com.		5	IN	NS	a9-67.akam.net.
+
+;; Query time: 40 msec
+;; SERVER: 192.168.174.2#53(192.168.174.2) (UDP)
+;; WHEN: Sat Aug 15 12:44:10 IST 2026
+;; MSG SIZE  rcvd: 199
+
+
+; <<>> DiG 9.20.26-1-Debian <<>> TXT tesla.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22366
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1280
+;; QUESTION SECTION:
+;tesla.com.			IN	TXT
+
+;; Query time: 428 msec
+;; SERVER: 192.168.174.2#53(192.168.174.2) (UDP)
+;; WHEN: Sat Aug 15 12:44:11 IST 2026
+;; MSG SIZE  rcvd: 38
+
+
+; <<>> DiG 9.20.26-1-Debian <<>> CNAME www.tesla.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48652
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1280
+;; QUESTION SECTION:
+;www.tesla.com.			IN	CNAME
+
+;; ANSWER SECTION:
+www.tesla.com.		5	IN	CNAME	www.tesla.com.edgekey.net.
+
+;; Query time: 24 msec
+;; SERVER: 192.168.174.2#53(192.168.174.2) (UDP)
+;; WHEN: Sat Aug 15 12:44:11 IST 2026
+;; MSG SIZE  rcvd: 81
+

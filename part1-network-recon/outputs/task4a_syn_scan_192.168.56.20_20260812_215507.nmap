@@ -1,0 +1,20 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:56:22 2026 as: /usr/lib/nmap/nmap -sS -p 1-1024 -T3 --reason -oN ./outputs/task4a_syn_scan_192.168.56.20_20260812_215507.nmap -oG ./outputs/task4a_syn_scan_192.168.56.20_20260812_215507.gnmap 192.168.56.20
+Nmap scan report for 192.168.56.20
+Host is up, received arp-response (0.0029s latency).
+Not shown: 1012 closed tcp ports (reset)
+PORT    STATE SERVICE      REASON
+21/tcp  open  ftp          syn-ack ttl 64
+22/tcp  open  ssh          syn-ack ttl 64
+23/tcp  open  telnet       syn-ack ttl 64
+25/tcp  open  smtp         syn-ack ttl 64
+53/tcp  open  domain       syn-ack ttl 64
+80/tcp  open  http         syn-ack ttl 64
+111/tcp open  rpcbind      syn-ack ttl 64
+139/tcp open  netbios-ssn  syn-ack ttl 64
+445/tcp open  microsoft-ds syn-ack ttl 64
+512/tcp open  exec         syn-ack ttl 64
+513/tcp open  login        syn-ack ttl 64
+514/tcp open  shell        syn-ack ttl 64
+MAC Address: 00:0C:29:FA:DD:2A (VMware)
+
+# Nmap done at Wed Aug 12 21:56:22 2026 -- 1 IP address (1 host up) scanned in 0.42 seconds

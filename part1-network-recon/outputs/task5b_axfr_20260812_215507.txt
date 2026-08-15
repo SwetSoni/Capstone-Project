@@ -1,0 +1,24 @@
+--- Zone Transfer (AXFR) ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> axfr lab.local @192.168.56.10
+;; global options: +cmd
+lab.local.		604800	IN	SOA	ns1.lab.local. admin.lab.local. 2024081201 604800 86400 2419200 604800
+lab.local.		604800	IN	TXT	"v=spf1 mx a ip4:192.168.56.0/24 -all"
+lab.local.		604800	IN	TXT	"Lab domain for capstone security assessment"
+lab.local.		604800	IN	MX	10 mail.lab.local.
+lab.local.		604800	IN	NS	ns1.lab.local.
+lab.local.		604800	IN	A	192.168.56.10
+db.lab.local.		604800	IN	A	192.168.56.30
+ftp.lab.local.		604800	IN	CNAME	meta.lab.local.
+kali.lab.local.		604800	IN	A	192.168.56.10
+mail.lab.local.		604800	IN	A	192.168.56.10
+meta.lab.local.		604800	IN	A	192.168.56.20
+ns1.lab.local.		604800	IN	A	192.168.56.10
+webserver.lab.local.	604800	IN	A	192.168.56.20
+www.lab.local.		604800	IN	CNAME	webserver.lab.local.
+lab.local.		604800	IN	SOA	ns1.lab.local. admin.lab.local. 2024081201 604800 86400 2419200 604800
+;; Query time: 20 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (TCP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; XFR size: 15 records (messages 1, bytes 459)
+

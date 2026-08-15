@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:56:22 2026 as: /usr/lib/nmap/nmap -sS -p 1-1024 -T3 --reason -oN ./outputs/task4a_syn_scan_192.168.56.20_20260812_215507.nmap -oG ./outputs/task4a_syn_scan_192.168.56.20_20260812_215507.gnmap 192.168.56.20
+Host: 192.168.56.20 ()	Status: Up
+Host: 192.168.56.20 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/open/tcp//smtp///, 53/open/tcp//domain///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 512/open/tcp//exec///, 513/open/tcp//login///, 514/open/tcp//shell///	Ignored State: closed (1012)
+# Nmap done at Wed Aug 12 21:56:22 2026 -- 1 IP address (1 host up) scanned in 0.42 seconds

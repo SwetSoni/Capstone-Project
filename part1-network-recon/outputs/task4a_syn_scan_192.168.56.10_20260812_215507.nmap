@@ -1,0 +1,8 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:56:36 2026 as: /usr/lib/nmap/nmap -sS -p 1-1024 -T3 --reason -oN ./outputs/task4a_syn_scan_192.168.56.10_20260812_215507.nmap -oG ./outputs/task4a_syn_scan_192.168.56.10_20260812_215507.gnmap 192.168.56.10
+Nmap scan report for 192.168.56.10
+Host is up, received localhost-response (0.000014s latency).
+Not shown: 1023 closed tcp ports (reset)
+PORT   STATE SERVICE REASON
+53/tcp open  domain  syn-ack ttl 64
+
+# Nmap done at Wed Aug 12 21:56:36 2026 -- 1 IP address (1 host up) scanned in 0.18 seconds

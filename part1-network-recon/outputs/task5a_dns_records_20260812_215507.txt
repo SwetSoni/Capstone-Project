@@ -1,0 +1,161 @@
+--- A Record ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> A lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11639
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: ffbaaedc4b1a9be1010000006a7c9ecf4ec8c5e771215535 (good)
+;; QUESTION SECTION:
+;lab.local.			IN	A
+
+;; ANSWER SECTION:
+lab.local.		604800	IN	A	192.168.56.10
+
+;; Query time: 4 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 82
+
+
+--- MX Record ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> MX lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17294
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: c7d9f034a0fcb1fa010000006a7c9ecfe1b30d1726d9e73e (good)
+;; QUESTION SECTION:
+;lab.local.			IN	MX
+
+;; ANSWER SECTION:
+lab.local.		604800	IN	MX	10 mail.lab.local.
+
+;; ADDITIONAL SECTION:
+mail.lab.local.		604800	IN	A	192.168.56.10
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 103
+
+
+--- NS Record ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> NS lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36870
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 2df89c492256208e010000006a7c9ecf5ad85c524a06bc7e (good)
+;; QUESTION SECTION:
+;lab.local.			IN	NS
+
+;; ANSWER SECTION:
+lab.local.		604800	IN	NS	ns1.lab.local.
+
+;; ADDITIONAL SECTION:
+ns1.lab.local.		604800	IN	A	192.168.56.10
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 100
+
+
+--- TXT Record ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> TXT lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52361
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: fe0df1d814b7999a010000006a7c9ecf44b7b53fb2dbea3a (good)
+;; QUESTION SECTION:
+;lab.local.			IN	TXT
+
+;; ANSWER SECTION:
+lab.local.		604800	IN	TXT	"v=spf1 mx a ip4:192.168.56.0/24 -all"
+lab.local.		604800	IN	TXT	"Lab domain for capstone security assessment"
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 171
+
+
+--- CNAME Record ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> CNAME www.lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44894
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 9eacad095aeea5cb010000006a7c9ecf7ecd7abcc2c042a8 (good)
+;; QUESTION SECTION:
+;www.lab.local.			IN	CNAME
+
+;; ANSWER SECTION:
+www.lab.local.		604800	IN	CNAME	webserver.lab.local.
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 94
+
+
+--- ANY Record (all types) ---
+
+; <<>> DiG 9.20.26-1-Debian <<>> ANY lab.local @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59896
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: ef7f9ec630db42b0010000006a7c9ecff9608203d229261f (good)
+;; QUESTION SECTION:
+;lab.local.			IN	ANY
+
+;; ANSWER SECTION:
+lab.local.		604800	IN	TXT	"v=spf1 mx a ip4:192.168.56.0/24 -all"
+lab.local.		604800	IN	TXT	"Lab domain for capstone security assessment"
+lab.local.		604800	IN	MX	10 mail.lab.local.
+lab.local.		604800	IN	SOA	ns1.lab.local. admin.lab.local. 2024081201 604800 86400 2419200 604800
+lab.local.		604800	IN	NS	ns1.lab.local.
+lab.local.		604800	IN	A	192.168.56.10
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (TCP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 268
+

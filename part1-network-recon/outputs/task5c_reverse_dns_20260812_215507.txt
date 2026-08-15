@@ -1,0 +1,70 @@
+--- Reverse DNS Lookups ---
+Reverse lookup for 192.168.56.1:
+
+; <<>> DiG 9.20.26-1-Debian <<>> -x 192.168.56.1 @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 45264
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 95385e318df13850010000006a7c9ecfffaa04e532418554 (good)
+;; QUESTION SECTION:
+;1.56.168.192.in-addr.arpa.	IN	PTR
+
+;; AUTHORITY SECTION:
+56.168.192.in-addr.arpa. 604800	IN	SOA	ns1.lab.local. admin.lab.local. 2024081201 604800 86400 2419200 604800
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 137
+
+
+Reverse lookup for 192.168.56.20:
+
+; <<>> DiG 9.20.26-1-Debian <<>> -x 192.168.56.20 @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38488
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: b4e0f634dd32f3f5010000006a7c9ecf87d7cfc86fe153e9 (good)
+;; QUESTION SECTION:
+;20.56.168.192.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+20.56.168.192.in-addr.arpa. 604800 IN	PTR	meta.lab.local.
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 111
+
+
+Reverse lookup for 192.168.56.10:
+
+; <<>> DiG 9.20.26-1-Debian <<>> -x 192.168.56.10 @192.168.56.10
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 13217
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 69df8a09f6bb7672010000006a7c9ecf7635bca1bc91ab07 (good)
+;; QUESTION SECTION:
+;10.56.168.192.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+10.56.168.192.in-addr.arpa. 604800 IN	PTR	kali.lab.local.
+
+;; Query time: 0 msec
+;; SERVER: 192.168.56.10#53(192.168.56.10) (UDP)
+;; WHEN: Wed Aug 12 21:56:55 IST 2026
+;; MSG SIZE  rcvd: 111
+
+

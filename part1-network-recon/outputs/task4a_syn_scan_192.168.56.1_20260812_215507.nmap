@@ -1,0 +1,8 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:55:11 2026 as: /usr/lib/nmap/nmap -sS -p 1-1024 -T3 --reason -oN ./outputs/task4a_syn_scan_192.168.56.1_20260812_215507.nmap -oG ./outputs/task4a_syn_scan_192.168.56.1_20260812_215507.gnmap 192.168.56.1
+Nmap scan report for 192.168.56.1
+Host is up, received arp-response (0.00099s latency).
+All 1024 scanned ports on 192.168.56.1 are in ignored states.
+Not shown: 1024 filtered tcp ports (no-response)
+MAC Address: 00:50:56:C0:00:02 (VMware)
+
+# Nmap done at Wed Aug 12 21:55:33 2026 -- 1 IP address (1 host up) scanned in 22.57 seconds

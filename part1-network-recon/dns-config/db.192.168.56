@@ -1,0 +1,17 @@
+; BIND9 Reverse Zone File for 192.168.56.x
+; File: /etc/bind/db.192.168.56
+
+$TTL    604800
+@       IN      SOA     ns1.lab.local. admin.lab.local. (
+                     2024081201         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+@       IN      NS      ns1.lab.local.
+
+; PTR Records — reverse lookups
+10      IN      PTR     kali.lab.local.
+20      IN      PTR     meta.lab.local.
+30      IN      PTR     db.lab.local.

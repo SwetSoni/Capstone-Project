@@ -1,0 +1,29 @@
+# Nmap 7.95 scan initiated Wed Aug 12 21:56:43 2026 as: /usr/lib/nmap/nmap -O --osscan-guess -oN ./outputs/task4c_os_scan_192.168.56.10_20260812_215507.nmap 192.168.56.10
+Nmap scan report for 192.168.56.10
+Host is up (0.00043s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+Device type: general purpose|specialized|phone|storage-misc
+Running (JUST GUESSING): Linux 4.X|5.X|2.6.X|3.X (96%), Adtran embedded (92%), Google Android 10.X (92%), Synology DiskStation Manager 5.X (92%)
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/h:adtran:424rg cpe:/o:google:android:10 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:3.2 cpe:/a:synology:diskstation_manager:5.1
+Aggressive OS guesses: Linux 4.15 - 5.19 (96%), Adtran 424RG FTTH gateway (92%), Android 10 - 11 (Linux 4.14) (92%), Android 9 - 10 (Linux 4.9 - 4.14) (92%), Linux 2.6.32 (92%), Linux 2.6.39 - 3.2 (92%), Linux 3.11 (92%), Linux 3.7 - 4.19 (92%), Synology DiskStation Manager 5.1 (Linux 3.2) (92%), Linux 4.12 (92%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=8/12%OT=53%CT=1%CU=37028%PV=Y%DS=0%DC=L%G=Y%TM=6A7C9EC
+OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=103%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=104%GCD=1%ISR=104%TI=Z%
+OS:CI=Z%II=I%TS=A)SEQ(SP=104%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=106%G
+OS:CD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4C4ST11NW7%O2=M4C4ST11NW7%O3=M4
+OS:C4NNT11NW7%O4=M4C4ST11NW7%O5=M4C4ST11NW7%O6=M4C4ST11)WIN(W1=FED0%W2=FED0
+OS:%W3=FED0%W4=FED0%W5=FED0%W6=FED0)ECN(R=Y%DF=Y%T=40%W=FC94%O=M4C4NNSNW7%C
+OS:C=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%
+OS:T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD
+OS:=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S
+OS:=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 12 21:56:54 2026 -- 1 IP address (1 host up) scanned in 11.57 seconds

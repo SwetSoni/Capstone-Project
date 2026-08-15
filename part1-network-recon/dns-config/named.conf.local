@@ -1,0 +1,19 @@
+// BIND9 Named Configuration — Local Zone for lab.local
+// File: /etc/bind/named.conf.local
+// Add this to the existing named.conf.local on your Kali machine
+
+// Define the forward lookup zone for lab.local
+zone "lab.local" {
+    type master;                          // This server is authoritative for this zone
+    file "/etc/bind/db.lab.local";        // Path to the zone file
+    allow-transfer { 192.168.56.0/24; 127.0.0.1; };  // Allow zone transfers (for AXFR demo)
+    allow-query { any; };                 // Allow queries from any host
+};
+
+// Define the reverse lookup zone for 192.168.56.x
+zone "56.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192.168.56";
+    allow-transfer { 192.168.56.0/24; };
+    allow-query { any; };
+};
