@@ -1,0 +1,15 @@
+=== TEST 1: Register User ===
+{"message":"User 'testuser' registered successfully"}
+
+=== TEST 2: Login (correct password) ===
+{"message":"Login successful","user":{"id":1,"role":"user","username":"testuser"}}
+
+=== TEST 3: Login (wrong password) ===
+{"error":"Invalid username or password"}
+
+=== TEST 4: Admin without key ===
+{"error":"Missing X-API-Key header"}
+
+=== TEST 5: Admin with key ===
+{"total_users":1,"users":[{"created_at":"2026-08-15 16:41:53","id":1,"role":"user","username":"testuser"}]}
+

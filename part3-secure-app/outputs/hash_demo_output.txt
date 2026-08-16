@@ -1,0 +1,19 @@
+============================================================
+Bcrypt Password Hashing Demonstration
+============================================================
+
+Password:  SecureP@ssw0rd123
+Hash 1:    $2b$12$XyXT65J3v03PO5ieHzDKNe6ob3eT3Ye2Bgnomz4KdHXq9tlyRMYLi
+Hash 2:    $2b$12$CivU0DQpc3aX3B.2aDVNSucPP0o9e7MNKlxgGH5b6gNC3MQthm64C
+
+Hashes are different (unique salts): True
+
+Verify Hash 1: True
+Verify Hash 2: True
+Verify wrong password: False
+
+============================================================
+This proves that Bcrypt generates a unique salt for each
+hash operation — the same input produces different outputs,
+defeating rainbow table attacks.
+============================================================

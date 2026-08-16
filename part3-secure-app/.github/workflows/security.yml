@@ -1,0 +1,70 @@
+# GitHub Actions — Security CI/CD Pipeline
+# Capstone Part 3 — Task 5: CI/CD Security Gate
+#
+# This workflow implements "Shift Left Security" — the practice of integrating
+# security testing early in the development lifecycle (at the code commit stage)
+# rather than waiting until deployment or production. By running Bandit (a static
+# application security testing tool) on every push and pull request, security
+# vulnerabilities are caught before they reach production, reducing remediation
+# cost and risk.
+
+name: Security SAST Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  security-scan:
+    name: SAST Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up the Python environment
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Step 3: Install project dependencies and security tools
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install bandit semgrep
+
+      # Step 4: Run Bandit SAST scan
+      # -r . : Recursively scan all Python files in the repository
+      # -ll  : Report only Medium and High severity findings
+      # The workflow FAILS (exit non-zero) if Bandit finds any Medium/High issues
+      - name: Run Bandit (SAST)
+        run: |
+          echo "Running Bandit static analysis..."
+          bandit -r . -ll -f json -o bandit-report.json || true
+          bandit -r . -ll
+          echo "Bandit scan complete."
+
+      # Step 5 (Optional): Run Semgrep with Python ruleset
+      - name: Run Semgrep (Optional SAST)
+        run: |
+          echo "Running Semgrep static analysis..."
+          semgrep --config p/python . --json --output semgrep-report.json || true
+          semgrep --config p/python .
+          echo "Semgrep scan complete."
+        continue-on-error: true  # Semgrep is optional — don't fail the pipeline
+
+      # Step 6: Upload security reports as artifacts
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports
+          path: |
+            bandit-report.json
+            semgrep-report.json
