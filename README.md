@@ -16,10 +16,9 @@ This repository contains the final capstone project for the Certification in Cyb
 | Part | Directory | Description |
 |------|-----------|-------------|
 | **Part 1** | [`part1-network-recon/`](part1-network-recon/) | Network Reconnaissance and Vulnerability Assessment |
+| **Part 2** | [`part2-defense-soc/`](part2-defense-soc/) | Network Defense Architecture and SOC Operations |
 | **Part 3** | [`part3-secure-app/`](part3-secure-app/) | Secure Application Development |
 | **Part 4** | [`part4-automation-ai/`](part4-automation-ai/) | Security Automation and AI-Powered Threat Detection |
-
-> **Part 2** (Defence and SOC Operations) is a text-based submission and does not require a GitHub repository.
 
 ---
 
@@ -32,6 +31,13 @@ A penetration-test-style assessment of the 192.168.56.0/24 lab network following
 - Pre-engagement scope document in [`part1-network-recon/scope.md`](part1-network-recon/scope.md)
 - BIND9 DNS configuration in [`part1-network-recon/dns-config/`](part1-network-recon/dns-config/)
 - All scan outputs (Nmap, Nessus) in [`part1-network-recon/outputs/`](part1-network-recon/outputs/)
+
+## Part 2 — Network Defense Architecture and SOC Operations
+
+A detailed defense and SOC operations portfolio piece encompassing iptables firewall configurations, Zero Trust policy enforcement, SIEM correlation rules, and comprehensive incident response workflows.
+
+**Key Deliverables:**
+- Defense architecture & incident response report in [`part2-defense-soc/README.md`](part2-defense-soc/README.md)
 
 ## Part 3 — Secure Application Development
 
@@ -72,3 +78,7 @@ Python-based security tools: a socket-based port scanner, a log analysis pipelin
 - **DNS Server:** BIND9 (authoritative for lab.local)
 - **Secure App:** Python 3, Flask, bcrypt, Bandit (SAST)
 - **Automation:** Python 3, scikit-learn, requests, VirusTotal API v3
+
+---
+
+*Report prepared by Swet Soni as part of the Masai Capstone Project — Certification in Cybersecurity and Ethical Hacking with Applied AI.*

@@ -51,8 +51,6 @@ A security assessment was conducted against the 192.168.56.0/24 lab network to i
 | Metasploitable 2 | Intentionally vulnerable target | 192.168.56.20 | Ubuntu 8.04 (Metasploitable 2) |
 | DNS Server (BIND9) | Local authoritative DNS | 192.168.56.10 | Kali Linux (same host) |
 
-> **Note:** Update IP addresses to match your actual lab. Run `ip addr` on each VM to confirm.
-
 ---
 
 ## 3. Methodology
