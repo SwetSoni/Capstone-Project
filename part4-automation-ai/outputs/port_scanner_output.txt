@@ -1,0 +1,26 @@
+=================================================================
+  Port Scanner — Target: 192.168.56.20
+  Port Range: 1-1024
+  Started: 2026-08-15 22:32:05
+=================================================================
+
+Port       State      Banner
+-----------------------------------------------------------------
+21         open       220 (vsFTPd 2.3.4)
+22         open       SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+Protoco
+23         open        #'
+25         open       220 metasploitable.localdomain ESMTP Postfix 
+53         open       No banner received
+80         open       No banner received
+111        open       No banner received
+139        open       No banner received
+445        open       No banner received
+512        open       Where are you?
+513        open       No banner received
+514        open       getnameinfo: Temporary failure in name resol
+-----------------------------------------------------------------
+
+12 open port(s) found on 192.168.56.20
+
+Scan completed: 2026-08-15 22:32:09

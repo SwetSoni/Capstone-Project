@@ -1,0 +1,25 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Data (keep CSV for submission, exclude large temp files)
+# data/*.csv  — dataset included per submission requirements
+!data/download_dataset.py
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

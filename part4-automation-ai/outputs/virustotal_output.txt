@@ -1,0 +1,103 @@
+/home/kali/capstone/part4-automation-ai/virustotal_check.py:83: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  last_analysis = datetime.utcfromtimestamp(last_analysis).strftime("%Y-%m-%d %H:%M:%S UTC")
+=================================================================
+  VirusTotal IP Enrichment
+=================================================================
+
+[*] Extracting public IPs from: sample_logs/firewall.log
+[*] Found 6 unique public IP(s)
+[*] Querying VirusTotal API v3...
+
+  [1/6] Querying: 185.220.101.1... ⚠ MALICIOUS (14/91 vendors flagged)
+    (waiting 15s for rate limit...)
+  [2/6] Querying: 198.51.100.42... ✓ CLEAN (0/91 vendors flagged)
+    (waiting 15s for rate limit...)
+  [3/6] Querying: 203.0.113.5... ✓ CLEAN (0/91 vendors flagged)
+    (waiting 15s for rate limit...)
+  [4/6] Querying: 45.33.32.156... ⚠ MALICIOUS (2/91 vendors flagged)
+    (waiting 15s for rate limit...)
+  [5/6] Querying: 8.8.8.8... ✓ CLEAN (0/91 vendors flagged)
+    (waiting 15s for rate limit...)
+  [6/6] Querying: 91.189.89.199... ⚠ MALICIOUS (1/91 vendors flagged)
+
+=================================================================
+  VirusTotal Results (JSON)
+=================================================================
+{
+  "185.220.101.1": {
+    "ip": "185.220.101.1",
+    "malicious_detections": 14,
+    "harmless_count": 45,
+    "suspicious_count": 2,
+    "undetected_count": 30,
+    "last_analysis_date": "2026-08-15 16:20:06 UTC",
+    "total_vendors": 91,
+    "country": "DE",
+    "as_owner": "Stiftung Erneuerbare Freiheit"
+  },
+  "198.51.100.42": {
+    "ip": "198.51.100.42",
+    "malicious_detections": 0,
+    "harmless_count": 54,
+    "suspicious_count": 0,
+    "undetected_count": 37,
+    "last_analysis_date": "2026-08-15 17:05:15 UTC",
+    "total_vendors": 91,
+    "country": "Unknown",
+    "as_owner": "Unknown"
+  },
+  "203.0.113.5": {
+    "ip": "203.0.113.5",
+    "malicious_detections": 0,
+    "harmless_count": 54,
+    "suspicious_count": 0,
+    "undetected_count": 37,
+    "last_analysis_date": "2026-08-15 17:08:08 UTC",
+    "total_vendors": 91,
+    "country": "Unknown",
+    "as_owner": "Unknown"
+  },
+  "45.33.32.156": {
+    "ip": "45.33.32.156",
+    "malicious_detections": 2,
+    "harmless_count": 54,
+    "suspicious_count": 0,
+    "undetected_count": 35,
+    "last_analysis_date": "2026-08-14 19:48:41 UTC",
+    "total_vendors": 91,
+    "country": "US",
+    "as_owner": "Akamai Connected Cloud"
+  },
+  "8.8.8.8": {
+    "ip": "8.8.8.8",
+    "malicious_detections": 0,
+    "harmless_count": 53,
+    "suspicious_count": 0,
+    "undetected_count": 38,
+    "last_analysis_date": "2026-08-15 17:41:58 UTC",
+    "total_vendors": 91,
+    "country": "US",
+    "as_owner": "Google LLC"
+  },
+  "91.189.89.199": {
+    "ip": "91.189.89.199",
+    "malicious_detections": 1,
+    "harmless_count": 54,
+    "suspicious_count": 0,
+    "undetected_count": 36,
+    "last_analysis_date": "2026-08-13 11:18:59 UTC",
+    "total_vendors": 91,
+    "country": "GB",
+    "as_owner": "Canonical Group Limited"
+  }
+}
+
+=================================================================
+  IP                 Malicious    Harmless     Last Analysis
+-----------------------------------------------------------------
+  185.220.101.1      14           45           2026-08-15 16:20:06 UTC
+  198.51.100.42      0            54           2026-08-15 17:05:15 UTC
+  203.0.113.5        0            54           2026-08-15 17:08:08 UTC
+  45.33.32.156       2            54           2026-08-14 19:48:41 UTC
+  8.8.8.8            0            53           2026-08-15 17:41:58 UTC
+  91.189.89.199      1            54           2026-08-13 11:18:59 UTC

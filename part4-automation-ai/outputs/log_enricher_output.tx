@@ -1,0 +1,93 @@
+============================================================
+  Log Enricher — IP Extraction & Threat Intelligence
+============================================================
+
+[*] Parsing log file: sample_logs/firewall.log
+[*] Found 6 unique public IP(s)
+[*] Enriching IPs with threat intelligence from ip-api.com...
+
+  Querying: 185.220.101.1... Germany | Stiftung Erneuerbare Freiheit | Risk: HIGH
+  Querying: 198.51.100.42... Romania | TEST-NET-2 | Risk: LOW
+  Querying: 203.0.113.5... United States | TEST-NET-3 | Risk: LOW
+  Querying: 45.33.32.156... United States | Akamai Technologies, Inc. | Risk: MEDIUM
+  Querying: 8.8.8.8... United States | Google LLC | Risk: MEDIUM
+  Querying: 91.189.89.199... United Kingdom | Canonical | Risk: LOW
+
+============================================================
+  Enrichment Results (JSON)
+============================================================
+{
+  "185.220.101.1": {
+    "ip": "185.220.101.1",
+    "country": "Germany",
+    "isp": "Stiftung Erneuerbare Freiheit",
+    "is_hosting": true,
+    "is_proxy": true,
+    "is_mobile": false,
+    "risk_indicators": [
+      "Hosting/Cloud provider \u2014 commonly used for attack infrastructure",
+      "Proxy/VPN detected \u2014 may be used to anonymise malicious activity"
+    ],
+    "risk_level": "HIGH"
+  },
+  "198.51.100.42": {
+    "ip": "198.51.100.42",
+    "country": "Romania",
+    "isp": "TEST-NET-2",
+    "is_hosting": false,
+    "is_proxy": false,
+    "is_mobile": false,
+    "risk_indicators": [],
+    "risk_level": "LOW"
+  },
+  "203.0.113.5": {
+    "ip": "203.0.113.5",
+    "country": "United States",
+    "isp": "TEST-NET-3",
+    "is_hosting": false,
+    "is_proxy": false,
+    "is_mobile": false,
+    "risk_indicators": [],
+    "risk_level": "LOW"
+  },
+  "45.33.32.156": {
+    "ip": "45.33.32.156",
+    "country": "United States",
+    "isp": "Akamai Technologies, Inc.",
+    "is_hosting": true,
+    "is_proxy": false,
+    "is_mobile": false,
+    "risk_indicators": [
+      "Hosting/Cloud provider \u2014 commonly used for attack infrastructure"
+    ],
+    "risk_level": "MEDIUM"
+  },
+  "8.8.8.8": {
+    "ip": "8.8.8.8",
+    "country": "United States",
+    "isp": "Google LLC",
+    "is_hosting": true,
+    "is_proxy": false,
+    "is_mobile": false,
+    "risk_indicators": [
+      "Hosting/Cloud provider \u2014 commonly used for attack infrastructure"
+    ],
+    "risk_level": "MEDIUM"
+  },
+  "91.189.89.199": {
+    "ip": "91.189.89.199",
+    "country": "United Kingdom",
+    "isp": "Canonical",
+    "is_hosting": false,
+    "is_proxy": false,
+    "is_mobile": false,
+    "risk_indicators": [],
+    "risk_level": "LOW"
+  }
+}
+
+============================================================
+  Summary
+============================================================
+  Total IPs analysed: 6
+  High Risk: 1 | Medium Risk: 2 | Low Risk: 3 | Errors: 0

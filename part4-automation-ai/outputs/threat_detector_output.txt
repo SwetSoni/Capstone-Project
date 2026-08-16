@@ -1,0 +1,78 @@
+=================================================================
+  ML Threat Detector — Phishing URL Classification
+=================================================================
+
+[Step 1] Loading dataset...
+[!] Dataset not found at: data/phishing_dataset.csv
+[*] Attempting to download the dataset...
+    Downloading from: https://archive.ics.uci.edu/ml/machine-learning-databases/00327/Training%20Dataset.arff
+[!] Download failed or dataset not available. Generating synthetic dataset...
+[✓] Synthetic dataset saved to: data/phishing_dataset.csv
+
+--- First 5 Rows ---
+   having_IP_Address  URL_Length  Shortining_Service  having_At_Symbol  double_slash_redirecting  Prefix_Suffix  having_Sub_Domain  SSLfinal_State  Domain_registeration_length  Favicon  port  HTTPS_token  Request_URL  URL_of_Anchor  Links_in_tags  SFH  Submitting_to_email  Abnormal_URL  Redirect  on_mouseover  RightClick  popUpWidnow  Iframe  age_of_domain  DNSRecord  web_traffic  Page_Rank  Google_Index  Links_pointing_to_page  Statistical_report  Result
+0                  1           1                   0                 0                         0              1                  0               1                            0        0     1            1            1              1              1   -1                    1             1         1             0           0            1      -1              0         -1            0         -1            -1                       0                  -1       1
+1                 -1           0                   1                -1                         0              0                  1              -1                            1        1    -1            0            0              1              0   -1                   -1            -1        -1            -1          -1           -1       0             -1         -1            1          0            -1                       0                   0      -1
+2                  1           1                   0                 1                         1             -1                  1              -1                            0       -1    -1            1            1              0             -1   -1                    0             0         1            -1           1           -1       1              1         -1            0          0             1                       0                  -1       1
+3                  1          -1                   0                -1                         0              1                 -1               0                            1       -1     0            0           -1              0             -1    1                    0            -1        -1             1           0            1      -1              0         -1            1          1             0                      -1                  -1       1
+4                 -1           0                  -1                -1                         1              0                  0               1                           -1        1     0           -1            1              1              0   -1                    0            -1         0             1           1           -1      -1              1          1            1          0            -1                       1                   0      -1
+
+--- Class Distribution ---
+Result
+ 1    7059
+-1    3996
+Name: count, dtype: int64
+
+Total samples: 11055
+Legitimate (1): 7059 (63.9%)
+Phishing  (-1): 3996 (36.1%)
+
+[Step 2] Data Preprocessing...
+  Null values found: 0
+  Duplicate rows found: 0
+  No duplicates to remove. Dataset size: 11055
+  No categorical features to encode.
+
+[Step 3] Splitting dataset (80% train, 20% test)...
+  Training set: 8844 samples
+  Test set:     2211 samples
+
+[Step 4] Training Random Forest Classifier...
+
+  Random Forest Results:
+  Accuracy:  0.6929
+  Precision: 0.6793
+  Recall:    0.6929
+  F1 Score:  0.6792
+
+--- Full Classification Report (Random Forest) ---
+                precision    recall  f1-score   support
+
+ Phishing (-1)       0.59      0.43      0.49       778
+Legitimate (1)       0.73      0.84      0.78      1433
+
+      accuracy                           0.69      2211
+     macro avg       0.66      0.63      0.64      2211
+  weighted avg       0.68      0.69      0.68      2211
+
+
+[Step 5] Training Isolation Forest (Anomaly Detection)...
+  Minority class (phishing) ratio: 0.3615
+
+  Isolation Forest Results:
+  Anomaly Detection Accuracy: 0.5789
+  Precision: 0.5847
+  Recall:    0.5789
+  F1 Score:  0.5816
+
+=================================================================
+  Model Comparison
+=================================================================
+
+  Model                     Accuracy     Precision    Recall       F1 Score    
+  ----------------------------------------------------------------------
+  Random Forest             0.6929       0.6793       0.6929       0.6792      
+  Isolation Forest          0.5789       0.5847       0.5789       0.5816      
+
+[✓] Threat detection analysis complete.
+    Copy the output above into your README.md
